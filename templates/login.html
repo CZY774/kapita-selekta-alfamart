@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CornelVHub | Login</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/CZY-logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div id="branding-logo" class="nav-section">
+          <p id="branding-logo">CornelVHub</p>
+        </div>
+        <div id="nav-allmov-section" class="nav-section">
+            <a href="https://www.instagram.com/corneliusyoga/" target="blank">INSTAGRAM</a>
+        </div>
+        <div id="nav-social-section" class="nav-section">
+            <a href="https://www.linkedin.com/in/cornelius-yoga-783b6a291/" target="blank">LINKEDIN</a>
+        </div>
+        <div id="nav-signin-section" class="nav-section">
+          <a href="https://github.com/CZY774" target="blank">GITHUB</a>
+        </div>
+    </nav>
+
+    <div class="login-container">
+        <div class="login-form">
+            <form id="loginForm" method="POST">
+                <h1 class="login-title">LOGIN</h1>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div style="position: relative;">
+                        <input type="password" id="password" name="password" required>
+                        <i id="togglePassword" class="fas fa-eye" 
+                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+                    </div>
+                </div>                             
+                <button type="submit" class="login-btn">Login</button>
+                <div class="forgot-password">
+                    <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+                </div>
+            </form>
+
+            <div id="forgotPasswordForm">
+                <form id="resetPasswordForm">
+                    <h1 class="login-title">FORGOT?</h1>
+                    <div class="form-group">
+                        <label for="reset_username">Username</label>
+                        <input type="text" id="reset_username" name="reset_username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new_password">New Password</label>
+                        <div style="position: relative;">
+                            <input type="password" id="new_password" name="new_password" required>
+                            <i id="togglePassword" class="fas fa-eye"
+                            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;" ></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm_password">Confirm Password</label>
+                        <div style="position: relative;">
+                            <input type="password" id="confirm_password" name="confirm_password" required>
+                            <i id="togglePassword" class="fas fa-eye"
+                            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="login-btn">Reset Password</button>
+                    <div class="forgot-password">
+                        <a href="#" id="closeForgotPassword">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <p class="footer" id="author">
+        by Cornelius Yoga - 672022204
+    </p>
+    
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>
